@@ -239,19 +239,19 @@ After 7 attempts, the probability of a conflict for 1 million entries drops belo
 For comparison, the probability of a conflict if we were instead to increase the number of chars are:
 
 | random suffix chars | # of possible names | 50% probability of conflict when N names are added | 0.1% probability of conflict when N names are added |
-| --------------- | -------------- | ------ | ----- |
-| 5               | 14348907       | 5000   | 500   |
-| 6               | 387420489      | 25000  | 900   |
-| 7               | 10460353203    | 120000 | 5000  |
-| 8               | 282429536481   | 650000 | 8000  |
-| 9               | 7625597484987  | 3300000 | 120000 |
-| 10              | 205891132094649 | 17000000 | 600000 |
-| 11              | 5559060566555523 | 24000000 | 3400000 | 
+| --------------: | -------------: | -----: | ----: |
+| 5               | 14348907       | 4460   | 169   |
+| 6               | 387420489      | 23175  | 880   |
+| 7               | 10460353203    | 120421 | 4575  |
+| 8               | 282429536481   | 625724 | 23773  |
+| 9               | 7625597484987  | 3251357 | 123527 |
+| 10              | 205891132094649 | 16894547 | 641863 |
+| 11              | 5559060566555523 | 87786641 | 3335219 | 
 
 Here, we can see that we need 11 random suffix chars to for the "0.1% probability of conflict
 when N names are added" to exceed 1 million. The gives us a way to compare
 approaches; 7 retries provides roughly the same probability of conflict that we
-would get if we were to increased the number of random suffix chars to 11.
+would get if we were to increase the number of random suffix chars to 11.
 
 If we were to increase the number of random suffix chars we would break clients.
 We could argue that we had never guaranteed a random suffix char size and that
